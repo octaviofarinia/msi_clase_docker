@@ -1,7 +1,7 @@
 FROM alpine:latest as build
 
 RUN apk update
-RUN apk add openjdk17 -y
+RUN apk add openjdk17
 
 COPY . .
 RUN ./gradlew bootJar --no-daemon
